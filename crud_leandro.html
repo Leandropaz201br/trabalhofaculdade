@@ -1,0 +1,83 @@
+  <DOCTYPE html>
+ 
+    <head>
+        <script type="text/javascript" src="js_crud_leandro.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    </head>
+   
+    <body onload="variaveis()">
+            <p class="mt-9">novo item  | <a href="lista.html">lista itens</a></p> 
+            <h1> Cadastrar item</h1>
+            <br>
+            <form method="get">
+                <br>
+                Modelo:
+                <input type="text" name="modelo" required>
+                <br>
+                <br>
+                Marca:
+                <input type="text" name="marca" required>
+                <br>
+                <br>
+                <p>Tipo:
+                    <select name="tipo" required>
+                        <option selected disabled>- selecione a opcao -</option>
+                        <option value="Samsung">Sansung</option>
+                        <option value="LG">LG</option>
+                        <option value="Iphone">Iphone</option>
+                        <option value="Nokia">Nokia</option>
+                    </select>
+                </p>
+                <p>Quantidade:
+                    <input type="number" name="quantidade" min="1" max="10" value=10 required><br><br>
+                </p>
+                <p>Condicao:                  
+                    <input type="radio" name="condicao" value="Novo" required>
+                    Novo</input>             
+                    <input type="radio" name="condicao" value="Usado" required>
+                    Usado</input>
+                </p>
+                <p>Diferenciais:
+                    <input type="checkbox" name="diferenciais" value="Full HD">Full HD</input>
+                    <input type="checkbox" name="diferenciais" value="5G">5G</input>
+                    <input type="checkbox" name="diferenciais" value="Dual Chip">Dual Chip</input>
+                </p>
+                <div class="mb-3"></div>
+                <button type="button" onClick="cadastrar(this.form)" class="btn btn-primary">Cadastrar</button>
+                <button type="reset" class="btn btn-danger"> Limpar</button> 
+            </div>
+            </form>
+            <table class="table">
+                <thead>
+                  <tr class="table-primary">
+                    <th scope="col" >Codigo</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row">1</th>
+                    <td>Smart Phone</td>
+                    <td>Samsung</td>
+                    <td>J8</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">2</th>
+                    <td>Phone</td>
+                    <td>Nokia</td>
+                    <td>Tijolo</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">3</th>
+                    <td>Smart Phone</td>
+                    <td>Iphone</td>
+                    <td>13</td>
+                  </tr>
+                </tbody>
+              </table>
+    </body>
+</html>
